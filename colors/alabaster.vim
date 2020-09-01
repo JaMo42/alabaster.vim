@@ -55,9 +55,10 @@ hi link pythonFunction Function
 hi link pythonBuiltin Identifier
 hi link pythonDecoratorName pythonDecorator
 
-" CMake
+" Build systems
 
 hi link cmakeCommand Keyword
+hi link mesonBuiltin Keyword
 
 " Operator highlighting
 
