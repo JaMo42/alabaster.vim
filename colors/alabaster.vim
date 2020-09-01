@@ -1,0 +1,77 @@
+set background=dark
+
+hi clear
+if exists('syntax_on')
+  syntax reset
+endif
+
+let g:colors_name = "alabaster"
+
+hi Normal ctermfg=248 guifg=#999999 ctermbg=black guibg=#000000
+
+" Interface colors
+
+hi LineNr ctermfg=237 guifg=#3A3A3A
+
+" Syntax highlighting
+
+hi Comment ctermfg=167 guifg=#CC3333
+
+hi Constant ctermfg=135 guifg=#9933FF
+hi Number ctermfg=135 guifg=#9933FF
+hi String ctermfg=39 guifg=#0099FF
+hi Character ctermfg=44 guifg=#00CCCC
+hi link Float Number
+hi link Boolean Constant
+
+hi Identifier ctermfg=248 guifg=#999999
+hi link Function Identifier
+
+hi Statement ctermfg=255 guifg=#EEEEEE
+hi link Conditional Statement
+hi link Repeat Statement
+hi link Label Statement
+hi link Operator Statement
+hi link Keyword Statement
+hi link Exception Statement
+
+hi PreProc ctermfg=61 guifg=#6B6B7F
+hi link Include PreProc
+hi link Define PreProc
+hi link PreCondit PreProc
+
+hi Type ctermfg=255 guifg=#EEEEEE
+hi link StorageClass Type
+hi link Structure Type
+hi link Typedef Type
+
+" C/C++
+
+hi cIncluded ctermfg=240 guifg=#575757
+
+" Python
+
+hi link pythonFunction Function
+hi link pythonBuiltin Identifier
+hi link pythonDecoratorName pythonDecorator
+
+" Operator highlighting
+
+fun! s:HighlightOperators()
+  syntax match alabaster_Special1 "?\|+\|-\|\*\|:\|<\|>\|&\||\|!\|\~\|\^\|%\|)\|(\|\.\|/\(/\|*\)\@!"
+  syntax match alabaster_Special2 "\[\|\]\|{\|}\|,\|;"
+  syntax match alabaster_Assign "=\|+=\|-=\|\*=\|\/=\|%=\|&&=\|||=\|\~=\|\^=\|&=\||="
+  " Override comparison operators, since `=' is already highlighted
+  syntax match alabaster_CompOverride "==\|!=\|>=\|<=\|<=>"
+  syntax match alabaster_Glue "::"
+
+  hi alabaster_Special1 ctermfg=37 guifg=#009999
+  hi alabaster_Special2 ctermfg=34 guifg=#009900
+  hi alabaster_Assign ctermfg=83 guifg=#66FF33
+  hi alabaster_CompOverride ctermfg=37 guifg=#009999
+  hi alabaster_Glue ctermfg=71 guifg=#669966
+endfunction
+
+au Syntax * call s:HighlightOperators()
+au ColorScheme * call s:HighlightOperators()
+
