@@ -55,6 +55,11 @@ hi link pythonFunction Function
 hi link pythonBuiltin Identifier
 hi link pythonDecoratorName pythonDecorator
 
+" CMake
+
+hi link cmakeCommand Keyword
+hi link cmakeArguments Keyword
+
 " Operator highlighting
 
 fun! s:HighlightOperators()
