@@ -58,7 +58,6 @@ hi link pythonDecoratorName pythonDecorator
 " CMake
 
 hi link cmakeCommand Keyword
-hi link cmakeArguments Keyword
 
 " Operator highlighting
 
