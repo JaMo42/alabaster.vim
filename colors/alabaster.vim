@@ -61,6 +61,13 @@ hi link pythonDecoratorName pythonDecorator
 hi link cmakeCommand Keyword
 hi link mesonBuiltin Keyword
 
+" Doxygen
+
+hi link doxygenSpecialMultilineDesc Comment
+hi link doxygenBrief Comment
+hi link doxygenBriefLine Comment
+hi link doxygenComment Comment
+
 " Operator highlighting
 
 fun! s:HighlightOperators()
