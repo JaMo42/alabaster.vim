@@ -85,6 +85,8 @@ fun! s:HighlightOperators()
   hi alabaster_Glue ctermfg=71 guifg=#669966
 endfunction
 
+augroup Alabaster
 au Syntax * call s:HighlightOperators()
 au ColorScheme * call s:HighlightOperators()
+augroup END
 
