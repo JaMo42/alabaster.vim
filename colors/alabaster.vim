@@ -13,6 +13,7 @@ hi Normal ctermfg=248 guifg=#999999 ctermbg=black guibg=#000000
 
 hi LineNr ctermfg=237 guifg=#3A3A3A
 hi! link SignColumn LineNr
+hi! ColorColumn ctermbg=232 guibg=#080808
 
 " Syntax highlighting
 
