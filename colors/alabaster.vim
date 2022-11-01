@@ -47,6 +47,13 @@ hi link StorageClass Type
 hi link Structure Type
 hi link Typedef Type
 
+" Popup menus
+
+hi Pmenu ctermfg=232 guifg=#080808 ctermbg=61 guibg=#6B6B7F
+hi PmenuSel ctermfg=61 guifg=#6B6B7F ctermbg=232 guibg=#080808
+hi PmenuSbar ctermbg=61 guibg=#6B6B7F
+hi PmenuThumb ctermbg=248 guibg=#999999
+
 " C/C++
 
 hi cIncluded ctermfg=240 guifg=#575757
