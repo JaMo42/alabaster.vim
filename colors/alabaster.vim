@@ -58,6 +58,11 @@ hi PmenuThumb ctermbg=248 guibg=#999999
 
 hi cIncluded ctermfg=240 guifg=#575757
 
+" Rust
+
+hi link rustCommentLineDoc Comment
+hi link rustCommentBlockDoc Comment
+
 " Python
 
 hi link pythonFunction Function
