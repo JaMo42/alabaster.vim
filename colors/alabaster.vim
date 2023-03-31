@@ -86,7 +86,7 @@ hi link doxygenComment Comment
 fun! s:HighlightOperators()
   syntax match alabaster_Special1 "?\|+\|-\|\*\|:\|<\|>\|&\||\|!\|\~\|\^\|%\|)\|(\|\.\|/\(/\|*\)\@!"
   syntax match alabaster_Special2 "\[\|\]\|{\|}\|,\|;"
-  syntax match alabaster_Assign "=\|+=\|-=\|\*=\|\/=\|%=\|&&=\|||=\|\~=\|\^=\|&=\||="
+  syntax match alabaster_Assign "=\|+=\|-=\|\*=\|\/=\|%=\|&&=\|||=\|\~=\|\^=\|&=\||=\|:="
   " Override comparison operators, since `=' is already highlighted
   syntax match alabaster_CompOverride "==\|!=\|>=\|<=\|<=>"
   syntax match alabaster_Glue "::"
