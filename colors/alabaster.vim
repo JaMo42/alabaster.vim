@@ -89,12 +89,16 @@ fun! s:HighlightOperators()
   syntax match alabaster_Assign "=\|+=\|-=\|\*=\|\/=\|%=\|&&=\|||=\|\~=\|\^=\|&=\||=\|:="
   " Override comparison operators, since `=' is already highlighted
   syntax match alabaster_CompOverride "==\|!=\|>=\|<=\|<=>"
+  " Same reason as comparison operators, not sure if I want it to be cyan or
+  " green but I will go with green for now so it needs a new rule.
+  syntax match alabaster_FatArrowOverride "=>"
   syntax match alabaster_Glue "::"
 
   hi alabaster_Special1 ctermfg=37 guifg=#009999
   hi alabaster_Special2 ctermfg=34 guifg=#009900
   hi alabaster_Assign ctermfg=83 guifg=#66FF33
   hi alabaster_CompOverride ctermfg=37 guifg=#009999
+  hi alabaster_FatArrowOverride ctermfg=34 guifg=#009900
   hi alabaster_Glue ctermfg=71 guifg=#669966
 endfunction
 
